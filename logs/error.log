@@ -1158,3 +1158,58 @@ Stack Trace:
 #2 {main}
 
 
+2016-03-15 10:23:38 Error: Fatal Error (1): Call to a member function find() on boolean in [C:\xampp\htdocs\coowi\src\Controller\PostsController.php, line 19]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-03-15 10:23:39 Error: [Cake\Error\FatalErrorException] Call to a member function find() on boolean
+Request URL: /coowi/
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 19)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-15 10:24:02 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Article could not be found.
+Exception Attributes: array (
+  'class' => 'Article',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi/article
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-15 10:24:08 Error: [PDOException] SQLSTATE[HY000] [1130] Host 'Juanlu' is not allowed to connect to this MariaDB server
+Request URL: /coowi/articles
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php(48): PDO->__construct('mysql:host=10.1...', 'root', '', Array)
+#1 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(90): Cake\Database\Driver\Mysql->_connect('mysql:host=10.1...', Array)
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(43): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Connection.php(315): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(428): Cake\Database\Connection->schemaCollection()
+#8 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Query.php(211): Cake\ORM\Table->schema()
+#9 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\ArticlesTable))
+#10 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1242): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\ArticlesTable))
+#11 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(945): Cake\ORM\Table->query()
+#12 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(166): Cake\ORM\Table->find('all', Array)
+#13 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(688): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\ArticlesTable), Array)
+#14 C:\xampp\htdocs\coowi\src\Controller\ArticlesController.php(19): Cake\Controller\Controller->paginate(Object(App\Model\Table\ArticlesTable))
+#15 [internal function]: App\Controller\ArticlesController->index()
+#16 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#17 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#18 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ArticlesController))
+#19 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 {main}
+
+
