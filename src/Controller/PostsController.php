@@ -5,23 +5,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+//use Cake\Core\App;
+//App::uses('AppController', 'Controller');
+namespace App\Controller;
 
+//use App\Controller\AppController;
 class PostsController extends AppController {
 
     public $helpers = array('Html', 'Form');
     public $name = 'Posts';
 
     function index() {
-        $this->set('posts', $this->Post->find('all'));
+        $this->set('posts', $this->Post->find('all')); //Post
     }
 
     public function view($id = null) {
-        $this->set('post', $this->Post->findById($id));
+        $this->set('post', $this->Post->findById($id)); //Post
     }
 
     public function add() {
         if ($this->request->is('post')) {
-            if ($this->Post->save($this->request->data)) {
+            if ($this->Post->save($this->request->data)) { //Post
                 $this->Flash->success('Your post has been saved.');
                 $this->redirect(array('action' => 'index'));
             }
@@ -32,13 +36,13 @@ class PostsController extends AppController {
         if (!$id) {
             throw new NotFoundException(__('Invalid post'));
         }
-        $post = $this->Post->findById($id);
+        $post = $this->Post->findById($id); //Post
         if (!$post) {
             throw new NotFoundException(__('Invalid post'));
         }
         if ($this->request->is(array('post', 'put'))) {
-            $this->Post->id = $id;
-            if ($this->Post->save($this->request->data)) {
+            $this->Post->id = $id; //Post
+            if ($this->Post->save($this->request->data)) { //Post
                 $this->Flash->success(__('Your post has been updated.'));
                 return $this->redirect(array('action' => 'index'));
             }
@@ -53,10 +57,9 @@ class PostsController extends AppController {
         if (!$this->request->is('post')) {
             throw new MethodNotAllowedException();
         }
-        if ($this->Post->delete($id)) {
+        if ($this->Post->delete($id)) { //Post
             $this->Flash->success('The post with id: ' . $id . ' has been deleted.');
             $this->redirect(array('action' => 'index'));
         }
     }
-
 }
