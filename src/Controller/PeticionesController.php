@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\I18n\Time;
 
 /**
  * Peticiones Controller
@@ -36,7 +37,6 @@ class PeticionesController extends AppController
         $peticione = $this->Peticiones->get($id, [
             'contain' => []
         ]);
-		
 
         $this->set('peticione', $peticione);
         $this->set('_serialize', ['peticione']);
@@ -52,7 +52,8 @@ class PeticionesController extends AppController
         $peticione = $this->Peticiones->newEntity();
         if ($this->request->is('post')) {
             $peticione = $this->Peticiones->patchEntity($peticione, $this->request->data);
-            if ($this->Peticiones->save($peticione)) {
+            $peticione->fechacreacion = Time::now();
+            if ($this->Peticiones->save($peticione)) {                
                 $this->Flash->success(__('The peticione has been saved.'));
                 return $this->redirect(['action' => 'index']);
             } else {

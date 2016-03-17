@@ -25,8 +25,8 @@ class PeticionesTable extends Table
         parent::initialize($config);
 
         $this->table('peticiones');
-        $this->displayField('IDPETICION');
-        $this->primaryKey('IDPETICION');
+        $this->displayField('idpeticion');
+        $this->primaryKey('idpeticion');
     }
 
     /**
@@ -38,45 +38,45 @@ class PeticionesTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->integer('IDPETICION')
-            ->allowEmpty('IDPETICION', 'create');
+            ->integer('idpeticion')
+            ->allowEmpty('idpeticion', 'create');
 
         $validator
-            ->requirePresence('NIF', 'create')
-            ->notEmpty('NIF');
+            ->requirePresence('nif', 'create')
+            ->notEmpty('nif');
 
         $validator
-            ->requirePresence('TITULO', 'create')
-            ->notEmpty('TITULO');
+            ->requirePresence('titulo', 'create')
+            ->notEmpty('titulo');
 
         $validator
-            ->requirePresence('DESCRIPCION', 'create')
-            ->notEmpty('DESCRIPCION');
+            ->requirePresence('descripcion', 'create')
+            ->notEmpty('descripcion');
 
         $validator
-            ->requirePresence('ESTADO', 'create')
-            ->notEmpty('ESTADO');
+            ->requirePresence('estado', 'create')
+            ->notEmpty('estado');
 
         $validator
-            ->date('FECHACREACION')
-            ->requirePresence('FECHACREACION', 'create')
-            ->notEmpty('FECHACREACION');
+            ->date('fechacreacion')
+            ->requirePresence('fechacreacion', 'create')
+            ->notEmpty('fechacreacion');
 
         $validator
-            ->date('FECHACADUCIDAD')
-            ->requirePresence('FECHACADUCIDAD', 'create')
-            ->notEmpty('FECHACADUCIDAD');
+            ->date('fechacaducidad')
+            ->requirePresence('fechacaducidad', 'create')
+            ->notEmpty('fechacaducidad');
 
         $validator
-            ->requirePresence('LOCALIDAD', 'create')
-            ->notEmpty('LOCALIDAD');
+            ->requirePresence('localidad', 'create')
+            ->notEmpty('localidad');
 
         $validator
-            ->decimal('PRESUPUESTO')
-            ->allowEmpty('PRESUPUESTO');
+            ->decimal('presupuesto')
+            ->allowEmpty('presupuesto');
 
         $validator
-            ->allowEmpty('FOTO');
+            ->allowEmpty('foto');
 
         return $validator;
     }

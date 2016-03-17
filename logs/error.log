@@ -1451,3 +1451,379 @@ Stack Trace:
 #1 {main}
 
 
+2016-03-17 07:52:51 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'coowi.articles' doesn't exist
+Request URL: /coowi/
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'articles', Array, Object(Cake\Database\Schema\Table))
+#1 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(64): Cake\Database\Schema\Collection->describe('articles', Array)
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(429): Cake\Database\Schema\CachedCollection->describe('articles')
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Query.php(211): Cake\ORM\Table->schema()
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\ArticlesTable))
+#5 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1242): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\ArticlesTable))
+#6 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(945): Cake\ORM\Table->query()
+#7 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(166): Cake\ORM\Table->find('all', Array)
+#8 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(688): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\ArticlesTable), Array)
+#9 C:\xampp\htdocs\coowi\src\Controller\ArticlesController.php(19): Cake\Controller\Controller->paginate(Object(App\Model\Table\ArticlesTable))
+#10 [internal function]: App\Controller\ArticlesController->index()
+#11 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ArticlesController))
+#14 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2016-03-17 07:52:57 Error: [Cake\View\Exception\MissingTemplateException] Template file "Peticiones\edit.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Peticiones\\edit.ctp',
+)
+Request URL: /coowi/peticiones/edit/0
+Referer URL: http://localhost/coowi/peticiones
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PeticionesController))
+#4 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-03-17 08:00:08 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'coowi.articles' doesn't exist
+Request URL: /coowi/
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'articles', Array, Object(Cake\Database\Schema\Table))
+#1 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(64): Cake\Database\Schema\Collection->describe('articles', Array)
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(429): Cake\Database\Schema\CachedCollection->describe('articles')
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Query.php(211): Cake\ORM\Table->schema()
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\ArticlesTable))
+#5 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1242): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\ArticlesTable))
+#6 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(945): Cake\ORM\Table->query()
+#7 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(166): Cake\ORM\Table->find('all', Array)
+#8 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(688): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\ArticlesTable), Array)
+#9 C:\xampp\htdocs\coowi\src\Controller\ArticlesController.php(19): Cake\Controller\Controller->paginate(Object(App\Model\Table\ArticlesTable))
+#10 [internal function]: App\Controller\ArticlesController->index()
+#11 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ArticlesController))
+#14 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2016-03-17 08:20:37 Error: [RuntimeException] Unable to locate an object compatible with paginate.
+Request URL: /coowi/tiposusuarios
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\src\Controller\TiposUsuariosController.php(21): Cake\Controller\Controller->paginate(false)
+#1 [internal function]: App\Controller\TiposUsuariosController->index()
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TiposUsuariosController))
+#5 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-17 08:23:39 Error: [RuntimeException] Unable to locate an object compatible with paginate.
+Request URL: /coowi/tiposusuarios
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\src\Controller\TiposUsuariosController.php(21): Cake\Controller\Controller->paginate(false)
+#1 [internal function]: App\Controller\TiposUsuariosController->index()
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TiposUsuariosController))
+#5 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-17 08:27:50 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Tiposusuario could not be found.
+Exception Attributes: array (
+  'class' => 'Tiposusuario',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi/tiposusuario
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-17 08:27:54 Error: [RuntimeException] Unable to locate an object compatible with paginate.
+Request URL: /coowi/tiposusuarios
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\src\Controller\TiposUsuariosController.php(21): Cake\Controller\Controller->paginate(false)
+#1 [internal function]: App\Controller\TiposUsuariosController->index()
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TiposUsuariosController))
+#5 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-17 08:28:02 Error: [RuntimeException] Unable to locate an object compatible with paginate.
+Request URL: /coowi/tiposusuarios
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\src\Controller\TiposUsuariosController.php(21): Cake\Controller\Controller->paginate(false)
+#1 [internal function]: App\Controller\TiposUsuariosController->index()
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TiposUsuariosController))
+#5 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-17 08:28:15 Error: [RuntimeException] Unable to locate an object compatible with paginate.
+Request URL: /coowi/tiposusuarios
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\src\Controller\TiposUsuariosController.php(21): Cake\Controller\Controller->paginate(false)
+#1 [internal function]: App\Controller\TiposUsuariosController->index()
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TiposUsuariosController))
+#5 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-17 08:28:27 Error: [Cake\View\Exception\MissingTemplateException] Template file "Tiposusuarios\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Tiposusuarios\\index.ctp',
+)
+Request URL: /coowi/tiposusuarios
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TiposUsuariosController))
+#4 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-03-17 08:30:07 Error: [Cake\View\Exception\MissingTemplateException] Template file "Tiposusuarios\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Tiposusuarios\\index.ctp',
+)
+Request URL: /coowi/tiposusuarios
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TiposusuariosController))
+#4 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-03-17 08:31:13 Error: [Cake\View\Exception\MissingTemplateException] Template file "Tiposusuarios\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Tiposusuarios\\index.ctp',
+)
+Request URL: /coowi/tiposusuarios
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TiposUsuariosController))
+#4 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-03-17 08:32:27 Error: [Cake\View\Exception\MissingTemplateException] Template file "Tiposusuarios\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Tiposusuarios\\index.ctp',
+)
+Request URL: /coowi/tiposusuarios
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TiposusuariosController))
+#4 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-03-17 08:33:13 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\coowi\src\Template\Tiposusuarios\index.ctp, line 14]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Tiposusuarios\index.ctp, line 14
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-17 08:39:20 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\coowi\src\Template\Tiposusuarios\index.ctp, line 14]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Tiposusuarios\index.ctp, line 14
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-17 08:40:46 Error: Fatal Error (1): Call to a member function newEntity() on boolean in [C:\xampp\htdocs\coowi\src\Controller\TiposusuariosController.php, line 51]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-03-17 08:40:46 Error: [Cake\Error\FatalErrorException] Call to a member function newEntity() on boolean
+Request URL: /coowi/tiposusuarios/add
+Referer URL: http://localhost/coowi/tiposusuarios
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 51)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-17 08:52:58 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+Request URL: /coowi/tiposusuarios/add
+Referer URL: http://localhost/coowi/tiposusuarios/add
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1544): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1460): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#7 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1391): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#8 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1392): Cake\Database\Connection->transactional(Object(Closure))
+#10 C:\xampp\htdocs\coowi\src\Controller\TiposusuariosController.php(54): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#11 [internal function]: App\Controller\TiposusuariosController->add()
+#12 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TiposusuariosController))
+#15 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2016-03-17 09:02:39 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+Request URL: /coowi/tiposusuarios/add
+Referer URL: http://localhost/coowi/tiposusuarios/add
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1544): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1460): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#7 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1391): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#8 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1392): Cake\Database\Connection->transactional(Object(Closure))
+#10 C:\xampp\htdocs\coowi\src\Controller\TiposusuariosController.php(54): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#11 [internal function]: App\Controller\TiposusuariosController->add()
+#12 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TiposusuariosController))
+#15 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2016-03-17 09:03:49 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+Request URL: /coowi/tiposusuarios/add
+Referer URL: http://localhost/coowi/tiposusuarios/add
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1544): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1460): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#7 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1391): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#8 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1392): Cake\Database\Connection->transactional(Object(Closure))
+#10 C:\xampp\htdocs\coowi\src\Controller\TiposusuariosController.php(54): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#11 [internal function]: App\Controller\TiposusuariosController->add()
+#12 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TiposusuariosController))
+#15 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2016-03-17 11:21:01 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'coowi.articles' doesn't exist
+Request URL: /coowi/
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'articles', Array, Object(Cake\Database\Schema\Table))
+#1 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(64): Cake\Database\Schema\Collection->describe('articles', Array)
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(429): Cake\Database\Schema\CachedCollection->describe('articles')
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Query.php(211): Cake\ORM\Table->schema()
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\ArticlesTable))
+#5 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1242): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\ArticlesTable))
+#6 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(945): Cake\ORM\Table->query()
+#7 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(166): Cake\ORM\Table->find('all', Array)
+#8 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(688): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\ArticlesTable), Array)
+#9 C:\xampp\htdocs\coowi\src\Controller\ArticlesController.php(19): Cake\Controller\Controller->paginate(Object(App\Model\Table\ArticlesTable))
+#10 [internal function]: App\Controller\ArticlesController->index()
+#11 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ArticlesController))
+#14 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2016-03-17 11:34:09 Error: [PDOException] SQLSTATE[HY000] [2002] Se ha intentado una operación de socket en un host no accesible.
+
+Request URL: /coowi/peticiones/add
+Referer URL: http://localhost/coowi/peticiones
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php(48): PDO->__construct('mysql:host=185....', 'myyouwi91', '11lJQE0l', Array)
+#1 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(90): Cake\Database\Driver\Mysql->_connect('mysql:host=185....', Array)
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(43): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Connection.php(315): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(428): Cake\Database\Connection->schemaCollection()
+#8 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\View\Form\EntityContext.php(462): Cake\ORM\Table->schema()
+#9 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(1160): Cake\View\Form\EntityContext->type('titulo')
+#10 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(1132): Cake\View\Helper\FormHelper->_inputType('titulo', Array)
+#11 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php(990): Cake\View\Helper\FormHelper->_parseOptions('titulo', Array)
+#12 C:\xampp\htdocs\coowi\src\Template\Peticiones\add.ctp(6): Cake\View\Helper\FormHelper->input('titulo')
+#13 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\View\View.php(992): include('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\View\View.php(952): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#15 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\View\View.php(587): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#16 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#17 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#18 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PeticionesController))
+#19 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 {main}
+
+
+2016-03-17 11:34:25 Error: [PDOException] SQLSTATE[HY000] [2002] Se ha intentado una operación de socket en un host no accesible.
+
+Request URL: /coowi/peticiones
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php(48): PDO->__construct('mysql:host=185....', 'myyouwi91', '11lJQE0l', Array)
+#1 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(90): Cake\Database\Driver\Mysql->_connect('mysql:host=185....', Array)
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(43): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Connection.php(315): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(428): Cake\Database\Connection->schemaCollection()
+#8 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Query.php(211): Cake\ORM\Table->schema()
+#9 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\PeticionesTable))
+#10 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1242): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\PeticionesTable))
+#11 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(945): Cake\ORM\Table->query()
+#12 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(166): Cake\ORM\Table->find('all', Array)
+#13 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(688): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\PeticionesTable), Array)
+#14 C:\xampp\htdocs\coowi\src\Controller\PeticionesController.php(22): Cake\Controller\Controller->paginate(Object(App\Model\Table\PeticionesTable))
+#15 [internal function]: App\Controller\PeticionesController->index()
+#16 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#17 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#18 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PeticionesController))
+#19 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#20 {main}
+
+
