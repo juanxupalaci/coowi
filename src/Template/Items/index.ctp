@@ -1,6 +1,9 @@
 <!-- File: src/Template/Items/index.ctp -->
 
 <h1>Items</h1>
+
+<?= $this->Html->link('Add Item', ['action' => 'add']) ?>
+
 <table>
     <tr>
         <th>iditem</th>

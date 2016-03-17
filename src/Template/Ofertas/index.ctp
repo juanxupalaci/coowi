@@ -1,6 +1,9 @@
 <!-- File: src/Template/Ofertas/index.ctp -->
 
 <h1>Ofertas</h1>
+
+<?= $this->Html->link('Add Oferta', ['action' => 'add']) ?>
+
 <table>
     <tr>
         <th>idoferta</th>

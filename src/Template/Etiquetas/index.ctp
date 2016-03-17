@@ -1,6 +1,9 @@
 <!-- File: src/Template/Etiquetas/index.ctp -->
 
 <h1>Etiquetas</h1>
+
+<?= $this->Html->link('Add Etiqueta', ['action' => 'add']) ?>
+
 <table>
     <tr>
         <th>idetiqueta</th>
