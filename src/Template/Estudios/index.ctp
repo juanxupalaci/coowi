@@ -7,11 +7,12 @@
 <table>
     <tr>
         <th>idestudio</th>
-        <th>nif</th>
+        <th>nif(idusuario)</th>
         <th>centro</th>
         <th>titulacion</th>
         <th>fechainicio</th>
         <th>fechafin</th>
+        <th>Acciones</th>
         
         <!-- <th>id</th>
         <th>Title</th>
@@ -25,8 +26,8 @@
     <tr>
         <td><?= $estudio->idestudio ?></td>
         <td>
-            <!-- <?= $this->Html->link($estudio->title, ['action' => 'view', $estudio->idestudio]) ?> -->
-            <?= $estudio->nif ?>
+            <?= $this->Html->link($estudio->idusuario, ['action' => 'view', $estudio->idestudio]) ?>
+            <!-- <?= $estudio->idusuario ?> -->
         </td>
         <td><?= $estudio->centro ?></td>
         <td><?= $estudio->titulacion ?></td>
@@ -38,10 +39,10 @@
 		<td>
 			<?= $this->Form->postLink(
                 'Delete',
-                ['action' => 'delete', $estudio->id],
+                ['action' => 'delete', $estudio->idestudio],
                 ['confirm' => 'Are you sure?'])
             ?>
-            <?= $this->Html->link('Edit', ['action' => 'edit', $estudio->id]) ?>
+            <?= $this->Html->link('Edit', ['action' => 'edit', $estudio->idestudio]) ?>
         </td>
     </tr>
     <?php endforeach; ?>

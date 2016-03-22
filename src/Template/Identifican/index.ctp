@@ -8,6 +8,7 @@
     <tr>
         <th>iditem</th>
         <th>idetiqueta</th>
+        <th>Acciones</th>
     </tr>
 
     <!-- Here is where we iterate through our $identifican query object, printing out identifica info -->

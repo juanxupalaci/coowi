@@ -7,6 +7,5 @@
     echo $this->Form->input('nombre');
     echo $this->Form->input('fecha');
     echo $this->Form->input('estado');
-    echo $this->Form->button(__('Save Estudio'));
+    echo $this->Form->button(__('Save Etiqueta'));
     echo $this->Form->end();
-?>

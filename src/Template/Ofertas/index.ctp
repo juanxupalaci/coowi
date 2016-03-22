@@ -1,6 +1,7 @@
 <!-- File: src/Template/Ofertas/index.ctp -->
 
 <h1>Ofertas</h1>
+<?= $this->Html->link('Add Oferta', ['action' => 'add']) ?>
 <table>
     <tr>
         <th>idoferta</th>
@@ -9,6 +10,7 @@
         <th>comentario</th>
         <th>fecha</th>
         <th>estado</th>
+        <th>Acciones</th>
     </tr>
 
     <!-- Here is where we iterate through our $ofertas query object, printing out oferta info -->
@@ -18,7 +20,10 @@
         <td><?= $oferta->idoferta ?></td>
         <td><?= $oferta->iditem ?></td>
         <td><?= $oferta->precio ?></td>
-        <td><?= $oferta->comentario ?></td>
+        <td>
+            <?= $this->Html->link($oferta->comentario, ['action' => 'view', $oferta->idoferta]) ?>
+        </td>
+        <!-- <td><?= $oferta->comentario ?></td> -->
         <td><?= $oferta->fecha ?></td>
         <td><?= $oferta->estado ?></td>
         <td>

@@ -1,12 +1,14 @@
 <!-- File: src/Template/Etiquetas/index.ctp -->
 
 <h1>Etiquetas</h1>
+<?= $this->Html->link('Add Etiqueta', ['action' => 'add']) ?>
 <table>
     <tr>
         <th>idetiqueta</th>
         <th>nombre</th>
         <th>fecha</th>
         <th>estado</th>
+        <th>Acciones</th>
     </tr>
 
     <!-- Here is where we iterate through our $etiquetas query object, printing out etiqueta info -->

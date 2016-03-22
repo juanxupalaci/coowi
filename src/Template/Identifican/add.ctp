@@ -7,6 +7,6 @@
     //echo $this->Form->input('iditem');
     
     //echo $this->Form->input('body', ['rows' => '3']);
-    echo $this->Form->button(__('Save Estudio'));
+    echo $this->Form->button(__('Save Identifica'));
     echo $this->Form->end();
 ?>

@@ -1,6 +1,7 @@
 <!-- File: src/Template/Items/index.ctp -->
 
 <h1>Items</h1>
+<?= $this->Html->link('Add Item', ['action' => 'add']) ?>
 <table>
     <tr>
         <th>iditem</th>
@@ -9,6 +10,7 @@
         <th>descripcion</th>
         <th>fecha</th>
         <th>estado</th>
+        <th>Acciones</th>
     </tr>
 
     <!-- Here is where we iterate through our $items query object, printing out item info -->
