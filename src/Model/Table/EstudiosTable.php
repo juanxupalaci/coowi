@@ -42,8 +42,10 @@ class EstudiosTable extends Table
             ->allowEmpty('idestudio', 'create');
 
         $validator
-            ->requirePresence('nif', 'create')
-            ->notEmpty('nif');
+            ->requirePresence('idusuario', 'create')
+            ->notEmpty('idusuario');
+            //->requirePresence('nif', 'create')
+            //->notEmpty('nif');
 
         $validator
             ->requirePresence('centro', 'create')

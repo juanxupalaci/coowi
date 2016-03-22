@@ -23,7 +23,7 @@ class Identifican extends Entity
      */
     protected $_accessible = [
         '*' => true,
-        'iditem' => false,
+        'iditem' => false, //false
         'idetiqueta' => false,
     ];
 }

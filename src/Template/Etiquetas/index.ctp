@@ -16,7 +16,10 @@
     <?php foreach ($etiquetas as $etiqueta): ?>
     <tr>
         <td><?= $etiqueta->idetiqueta ?></td>
-        <td><?= $etiqueta->nombre ?></td>
+        <td>
+            <?= $this->Html->link($etiqueta->nombre, ['action' => 'view', $etiqueta->idetiqueta]) ?>
+        </td>
+        <!-- <td><?= $etiqueta->nombre ?></td> -->
         <td><?= $etiqueta->fecha ?></td>
         <td><?= $etiqueta->estado ?></td>
         <td>
