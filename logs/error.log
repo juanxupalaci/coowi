@@ -1848,3 +1848,412 @@ Stack Trace:
 #15 {main}
 
 
+2016-03-22 08:33:53 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'coowi.articles' doesn't exist
+Request URL: /coowi/
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'articles', Array, Object(Cake\Database\Schema\Table))
+#1 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(64): Cake\Database\Schema\Collection->describe('articles', Array)
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(429): Cake\Database\Schema\CachedCollection->describe('articles')
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Query.php(211): Cake\ORM\Table->schema()
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\ArticlesTable))
+#5 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1242): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\ArticlesTable))
+#6 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(945): Cake\ORM\Table->query()
+#7 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(166): Cake\ORM\Table->find('all', Array)
+#8 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(688): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\ArticlesTable), Array)
+#9 C:\xampp\htdocs\coowi\src\Controller\ArticlesController.php(19): Cake\Controller\Controller->paginate(Object(App\Model\Table\ArticlesTable))
+#10 [internal function]: App\Controller\ArticlesController->index()
+#11 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ArticlesController))
+#14 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2016-03-22 08:33:58 Error: [PDOException] SQLSTATE[HY000]: General error: 11 database disk image is malformed
+Request URL: /coowi/peticiones
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\BufferedStatement.php(74): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Statement\SqliteStatement->execute()
+#5 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#6 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1544): Cake\Database\Query->execute()
+#7 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1460): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#8 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1391): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#9 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#10 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1392): Cake\Database\Connection->transactional(Object(Closure))
+#11 C:\xampp\htdocs\coowi\vendor\cakephp\debug_kit\src\Routing\Filter\DebugBarFilter.php(209): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#12 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Event\EventManager.php(390): DebugKit\Routing\Filter\DebugBarFilter->afterDispatch(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Event\EventManager.php(356): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#14 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#15 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(92): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.afte...', Array)
+#16 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-03-22 08:33:59 Error: [PDOException] SQLSTATE[HY000]: General error: 11 database disk image is malformed
+Request URL: /coowi/peticiones
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\BufferedStatement.php(74): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Statement\SqliteStatement->execute()
+#5 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#6 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1544): Cake\Database\Query->execute()
+#7 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1460): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#8 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1391): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#9 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#10 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1392): Cake\Database\Connection->transactional(Object(Closure))
+#11 C:\xampp\htdocs\coowi\vendor\cakephp\debug_kit\src\Routing\Filter\DebugBarFilter.php(209): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#12 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Event\EventManager.php(390): DebugKit\Routing\Filter\DebugBarFilter->afterDispatch(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Event\EventManager.php(356): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#14 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#15 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(92): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.afte...', Array)
+#16 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-03-22 08:40:24 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'coowi.articles' doesn't exist
+Request URL: /coowi/
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'articles', Array, Object(Cake\Database\Schema\Table))
+#1 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(64): Cake\Database\Schema\Collection->describe('articles', Array)
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(429): Cake\Database\Schema\CachedCollection->describe('articles')
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Query.php(211): Cake\ORM\Table->schema()
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\ArticlesTable))
+#5 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1242): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\ArticlesTable))
+#6 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(945): Cake\ORM\Table->query()
+#7 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(166): Cake\ORM\Table->find('all', Array)
+#8 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(688): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\ArticlesTable), Array)
+#9 C:\xampp\htdocs\coowi\src\Controller\ArticlesController.php(19): Cake\Controller\Controller->paginate(Object(App\Model\Table\ArticlesTable))
+#10 [internal function]: App\Controller\ArticlesController->index()
+#11 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ArticlesController))
+#14 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2016-03-22 08:40:34 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'coowi.articles' doesn't exist
+Request URL: /coowi/
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'articles', Array, Object(Cake\Database\Schema\Table))
+#1 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(64): Cake\Database\Schema\Collection->describe('articles', Array)
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(429): Cake\Database\Schema\CachedCollection->describe('articles')
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Query.php(211): Cake\ORM\Table->schema()
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\ArticlesTable))
+#5 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1242): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\ArticlesTable))
+#6 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(945): Cake\ORM\Table->query()
+#7 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php(166): Cake\ORM\Table->find('all', Array)
+#8 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(688): Cake\Controller\Component\PaginatorComponent->paginate(Object(App\Model\Table\ArticlesTable), Array)
+#9 C:\xampp\htdocs\coowi\src\Controller\ArticlesController.php(19): Cake\Controller\Controller->paginate(Object(App\Model\Table\ArticlesTable))
+#10 [internal function]: App\Controller\ArticlesController->index()
+#11 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ArticlesController))
+#14 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2016-03-22 09:00:07 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`coowi`.`items`, CONSTRAINT `fk_contiene` FOREIGN KEY (`idpeticion`) REFERENCES `peticiones` (`idpeticion`))
+Request URL: /coowi/peticiones/delete/0
+Referer URL: http://localhost/coowi/peticiones
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1725): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1657): Cake\ORM\Table->_processDelete(Object(App\Model\Entity\Peticione), Object(ArrayObject))
+#7 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#8 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1662): Cake\Database\Connection->transactional(Object(Closure))
+#9 C:\xampp\htdocs\coowi\src\Controller\PeticionesController.php(103): Cake\ORM\Table->delete(Object(App\Model\Entity\Peticione))
+#10 [internal function]: App\Controller\PeticionesController->delete('0')
+#11 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PeticionesController))
+#14 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2016-03-22 09:03:40 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`coowi`.`items`, CONSTRAINT `fk_contiene` FOREIGN KEY (`idpeticion`) REFERENCES `peticiones` (`idpeticion`))
+Request URL: /coowi/peticiones/delete/0
+Referer URL: http://localhost/coowi/peticiones
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1725): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1657): Cake\ORM\Table->_processDelete(Object(App\Model\Entity\Peticione), Object(ArrayObject))
+#7 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#8 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1662): Cake\Database\Connection->transactional(Object(Closure))
+#9 C:\xampp\htdocs\coowi\src\Controller\PeticionesController.php(103): Cake\ORM\Table->delete(Object(App\Model\Entity\Peticione))
+#10 [internal function]: App\Controller\PeticionesController->delete('0')
+#11 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PeticionesController))
+#14 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2016-03-22 09:09:34 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`coowi`.`items`, CONSTRAINT `fk_contiene` FOREIGN KEY (`idpeticion`) REFERENCES `peticiones` (`idpeticion`))
+Request URL: /coowi/peticiones/delete/0
+Referer URL: http://localhost/coowi/peticiones
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1725): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1657): Cake\ORM\Table->_processDelete(Object(App\Model\Entity\Peticione), Object(ArrayObject))
+#7 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#8 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1662): Cake\Database\Connection->transactional(Object(Closure))
+#9 C:\xampp\htdocs\coowi\src\Controller\PeticionesController.php(103): Cake\ORM\Table->delete(Object(App\Model\Entity\Peticione), Array)
+#10 [internal function]: App\Controller\PeticionesController->delete('0')
+#11 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PeticionesController))
+#14 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2016-03-22 09:09:41 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`coowi`.`items`, CONSTRAINT `fk_contiene` FOREIGN KEY (`idpeticion`) REFERENCES `peticiones` (`idpeticion`))
+Request URL: /coowi/peticiones/delete/1
+Referer URL: http://localhost/coowi/peticiones
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1725): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1657): Cake\ORM\Table->_processDelete(Object(App\Model\Entity\Peticione), Object(ArrayObject))
+#7 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#8 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1662): Cake\Database\Connection->transactional(Object(Closure))
+#9 C:\xampp\htdocs\coowi\src\Controller\PeticionesController.php(103): Cake\ORM\Table->delete(Object(App\Model\Entity\Peticione), Array)
+#10 [internal function]: App\Controller\PeticionesController->delete('1')
+#11 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#13 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PeticionesController))
+#14 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 {main}
+
+
+2016-03-22 09:58:24 Error: [PDOException] SQLSTATE[HY000]: General error: 11 database disk image is malformed
+Request URL: /coowi/peticiones
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\BufferedStatement.php(74): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Statement\SqliteStatement->execute()
+#5 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#6 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1544): Cake\Database\Query->execute()
+#7 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1460): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
+#8 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1391): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#9 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#10 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1392): Cake\Database\Connection->transactional(Object(Closure))
+#11 C:\xampp\htdocs\coowi\vendor\cakephp\debug_kit\src\Routing\Filter\DebugBarFilter.php(209): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#12 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Event\EventManager.php(390): DebugKit\Routing\Filter\DebugBarFilter->afterDispatch(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Event\EventManager.php(356): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#14 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#15 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(92): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.afte...', Array)
+#16 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-03-22 10:22:17 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "tiposusuarios" with primary key [NULL]
+Request URL: /coowi/tiposusuarios/view
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\src\Controller\TiposusuariosController.php(38): Cake\ORM\Table->get(NULL, Array)
+#1 [internal function]: App\Controller\TiposusuariosController->view()
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TiposusuariosController))
+#5 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-22 10:32:09 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Trabajo could not be found.
+Exception Attributes: array (
+  'class' => 'Trabajo',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /coowi/trabajo
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-22 10:32:30 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\coowi\src\Template\Trabajos\index.ctp, line 14]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Trabajos\index.ctp, line 14
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-22 11:06:24 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`coowi`.`trabajos`, CONSTRAINT `fk_trabaja` FOREIGN KEY (`nif`) REFERENCES `usuarios` (`nif`) ON DELETE CASCADE ON UPDATE CASCADE)
+Request URL: /coowi/trabajos/add
+Referer URL: http://localhost/coowi/trabajos/add
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1544): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1460): Cake\ORM\Table->_insert(Object(App\Model\Entity\Trabajo), Array)
+#7 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1391): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Trabajo), Object(ArrayObject))
+#8 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1392): Cake\Database\Connection->transactional(Object(Closure))
+#10 C:\xampp\htdocs\coowi\src\Controller\TrabajosController.php(54): Cake\ORM\Table->save(Object(App\Model\Entity\Trabajo))
+#11 [internal function]: App\Controller\TrabajosController->add()
+#12 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TrabajosController))
+#15 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2016-03-22 11:21:29 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "usuarios" with primary key [NULL]
+Request URL: /coowi/usuarios/view
+Referer URL: http://localhost/coowi/usuarios
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\src\Controller\UsuariosController.php(38): Cake\ORM\Table->get(NULL, Array)
+#1 [internal function]: App\Controller\UsuariosController->view()
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsuariosController))
+#5 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-22 11:36:25 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "usuarios" with primary key [NULL]
+Request URL: /coowi/usuarios/edit
+Referer URL: http://localhost/coowi/usuarios
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\src\Controller\UsuariosController.php(78): Cake\ORM\Table->get(NULL, Array)
+#1 [internal function]: App\Controller\UsuariosController->edit()
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsuariosController))
+#5 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-22 11:54:54 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "usuarios"
+Request URL: /coowi/usuarios/view/0
+Referer URL: http://localhost/coowi/usuarios
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1201): Cake\ORM\Query->firstOrFail()
+#1 C:\xampp\htdocs\coowi\src\Controller\UsuariosController.php(38): Cake\ORM\Table->get('0', Array)
+#2 [internal function]: App\Controller\UsuariosController->view('0')
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsuariosController))
+#6 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-03-22 11:55:18 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "usuarios"
+Request URL: /coowi/usuarios/view/0
+Referer URL: http://localhost/coowi/usuarios
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1201): Cake\ORM\Query->firstOrFail()
+#1 C:\xampp\htdocs\coowi\src\Controller\UsuariosController.php(38): Cake\ORM\Table->get('0', Array)
+#2 [internal function]: App\Controller\UsuariosController->view('0')
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsuariosController))
+#6 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-03-22 11:55:49 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "usuarios"
+Request URL: /coowi/usuarios/view/1
+Referer URL: http://localhost/coowi/usuarios
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1201): Cake\ORM\Query->firstOrFail()
+#1 C:\xampp\htdocs\coowi\src\Controller\UsuariosController.php(38): Cake\ORM\Table->get('1', Array)
+#2 [internal function]: App\Controller\UsuariosController->view('1')
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsuariosController))
+#6 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-03-22 11:58:12 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "usuarios"
+Request URL: /coowi/usuarios/edit/0
+Referer URL: http://localhost/coowi/usuarios
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1201): Cake\ORM\Query->firstOrFail()
+#1 C:\xampp\htdocs\coowi\src\Controller\UsuariosController.php(78): Cake\ORM\Table->get('0', Array)
+#2 [internal function]: App\Controller\UsuariosController->edit('0')
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsuariosController))
+#6 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-03-22 12:11:26 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "usuarios"
+Request URL: /coowi/usuarios/edit/0
+Referer URL: http://localhost/coowi/usuarios
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1201): Cake\ORM\Query->firstOrFail()
+#1 C:\xampp\htdocs\coowi\src\Controller\UsuariosController.php(78): Cake\ORM\Table->get('0', Array)
+#2 [internal function]: App\Controller\UsuariosController->edit('0')
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsuariosController))
+#6 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-03-22 12:11:40 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "usuarios"
+Request URL: /coowi/usuarios/view/0
+Referer URL: http://localhost/coowi/usuarios
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1201): Cake\ORM\Query->firstOrFail()
+#1 C:\xampp\htdocs\coowi\src\Controller\UsuariosController.php(38): Cake\ORM\Table->get('0', Array)
+#2 [internal function]: App\Controller\UsuariosController->view('0')
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsuariosController))
+#6 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-03-22 12:18:18 Error: Fatal Error (1): Class 'App\Controller\Time' not found in [C:\xampp\htdocs\coowi\src\Controller\UsuariosController.php, line 55]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-03-22 12:18:18 Error: [Cake\Error\FatalErrorException] Class 'App\Controller\Time' not found
+Request URL: /coowi/usuarios/add
+Referer URL: http://localhost/coowi/usuarios/add
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Cont...', 'C:\\xampp\\htdocs...', 55)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

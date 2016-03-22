@@ -6,4 +6,3 @@
     echo $this->Form->input('nombretipo');
     echo $this->Form->button(__('Save Peticion'));   
     echo $this->Form->end();
-?>
