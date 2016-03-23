@@ -6,7 +6,7 @@
 
 <table>
     <tr>
-        <th>ID EtiquetaItem</th>
+        <th>ID Identifican</th>
         <th>ID Etiqueta</th>
         <th>ID Item</th>
         <th>Acciones</th>
