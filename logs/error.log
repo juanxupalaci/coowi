@@ -2257,3 +2257,114 @@ Stack Trace:
 #2 {main}
 
 
+2016-03-23 09:58:44 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "identifican" with primary key ['4']
+Request URL: /coowi/identifican/edit/4
+Referer URL: http://localhost/coowi/identifican
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\src\Controller\IdentificanController.php(76): Cake\ORM\Table->get('4', Array)
+#1 [internal function]: App\Controller\IdentificanController->edit('4')
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\IdentificanController))
+#5 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-23 09:58:56 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "identifican" with primary key ['2']
+Request URL: /coowi/identifican/edit/2
+Referer URL: http://localhost/coowi/identifican
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\src\Controller\IdentificanController.php(76): Cake\ORM\Table->get('2', Array)
+#1 [internal function]: App\Controller\IdentificanController->edit('2')
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\IdentificanController))
+#5 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-23 09:59:55 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "identifican" with primary key ['4']
+Request URL: /coowi/identifican/delete/4
+Referer URL: http://localhost/coowi/identifican
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\src\Controller\IdentificanController.php(100): Cake\ORM\Table->get('4')
+#1 [internal function]: App\Controller\IdentificanController->delete('4')
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\IdentificanController))
+#5 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-23 10:29:18 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "identifican" with primary key ['4']
+Request URL: /coowi/identifican/edit/4
+Referer URL: http://localhost/coowi/identifican
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\src\Controller\IdentificanController.php(76): Cake\ORM\Table->get('4', Array)
+#1 [internal function]: App\Controller\IdentificanController->edit('4')
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\IdentificanController))
+#5 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-23 11:04:39 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "identifican" with primary key ['4']
+Request URL: /coowi/identifican/delete/4
+Referer URL: http://localhost/coowi/identifican
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\src\Controller\IdentificanController.php(100): Cake\ORM\Table->get('4')
+#1 [internal function]: App\Controller\IdentificanController->delete('4')
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\IdentificanController))
+#5 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-23 12:32:39 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2-0' for key 'ak_uniqueideitquetaiditem'
+Request URL: /coowi/identifican/add
+Referer URL: http://localhost/coowi/identifican/add
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1544): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1460): Cake\ORM\Table->_insert(Object(App\Model\Entity\Identifican), Array)
+#7 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1391): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Identifican), Object(ArrayObject))
+#8 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1392): Cake\Database\Connection->transactional(Object(Closure))
+#10 C:\xampp\htdocs\coowi\src\Controller\IdentificanController.php(54): Cake\ORM\Table->save(Object(App\Model\Entity\Identifican))
+#11 [internal function]: App\Controller\IdentificanController->add()
+#12 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\IdentificanController))
+#15 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2016-03-23 12:34:20 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0-0' for key 'ak_uniqueideitquetaiditem'
+Request URL: /coowi/identifican/edit/3
+Referer URL: http://localhost/coowi/identifican/edit/3
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1611): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1462): Cake\ORM\Table->_update(Object(App\Model\Entity\Identifican), Array)
+#7 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1391): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Identifican), Object(ArrayObject))
+#8 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#9 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\ORM\Table.php(1392): Cake\Database\Connection->transactional(Object(Closure))
+#10 C:\xampp\htdocs\coowi\src\Controller\IdentificanController.php(79): Cake\ORM\Table->save(Object(App\Model\Entity\Identifican))
+#11 [internal function]: App\Controller\IdentificanController->edit('3')
+#12 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\IdentificanController))
+#15 C:\xampp\htdocs\coowi\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+

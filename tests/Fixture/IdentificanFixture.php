@@ -24,15 +24,17 @@ class IdentificanFixture extends TestFixture
      */
     // @codingStandardsIgnoreStart
     public $fields = [
-        'iditem' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+        'idetiquetaitem' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
         'idetiqueta' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+        'iditem' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         '_indexes' => [
-            'fk_identifica2' => ['type' => 'index', 'columns' => ['idetiqueta'], 'length' => []],
+            'fk_identifica' => ['type' => 'index', 'columns' => ['iditem'], 'length' => []],
         ],
         '_constraints' => [
-            'primary' => ['type' => 'primary', 'columns' => ['iditem', 'idetiqueta'], 'length' => []],
-            'fk_identifica2' => ['type' => 'foreign', 'columns' => ['idetiqueta'], 'references' => ['etiquetas', 'idetiqueta'], 'update' => 'restrict', 'delete' => 'restrict', 'length' => []],
-            'fk_identifica' => ['type' => 'foreign', 'columns' => ['iditem'], 'references' => ['items', 'iditem'], 'update' => 'restrict', 'delete' => 'restrict', 'length' => []],
+            'primary' => ['type' => 'primary', 'columns' => ['idetiquetaitem'], 'length' => []],
+            'ak_uniqueideitquetaiditem' => ['type' => 'unique', 'columns' => ['idetiqueta', 'iditem'], 'length' => []],
+            'fk_identifica2' => ['type' => 'foreign', 'columns' => ['idetiqueta'], 'references' => ['etiquetas', 'idetiqueta'], 'update' => 'cascade', 'delete' => 'cascade', 'length' => []],
+            'fk_identifica' => ['type' => 'foreign', 'columns' => ['iditem'], 'references' => ['items', 'iditem'], 'update' => 'cascade', 'delete' => 'cascade', 'length' => []],
         ],
         '_options' => [
             'engine' => 'InnoDB',
@@ -48,8 +50,9 @@ class IdentificanFixture extends TestFixture
      */
     public $records = [
         [
-            'iditem' => 1,
-            'idetiqueta' => 1
+            'idetiquetaitem' => 1,
+            'idetiqueta' => 1,
+            'iditem' => 1
         ],
     ];
 }

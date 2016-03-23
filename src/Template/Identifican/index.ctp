@@ -6,8 +6,9 @@
 
 <table>
     <tr>
-        <th>iditem</th>
-        <th>idetiqueta</th>
+        <th>ID EtiquetaItem</th>
+        <th>ID Etiqueta</th>
+        <th>ID Item</th>
         <th>Acciones</th>
     </tr>
 
@@ -15,15 +16,16 @@
 
     <?php foreach ($identifican as $identifica): ?>
     <tr>
-        <td><?= $identifica->iditem ?></td>
+        <td><?= $identifica->idetiquetaitem ?></td>        
         <td><?= $identifica->idetiqueta ?></td>
+        <td><?= $identifica->iditem ?></td>
         <td>
 			<?= $this->Form->postLink(
                 'Delete',
-                ['action' => 'delete', $identifica->iditem],
+                ['action' => 'delete', $identifica->idetiquetaitem],
                 ['confirm' => 'Are you sure?'])
             ?>
-            <?= $this->Html->link('Edit', ['action' => 'edit', $identifica->iditem]) ?>
+            <?= $this->Html->link('Edit', ['action' => 'edit', $identifica->idetiquetaitem]) ?>
         </td>
     </tr>
     <?php endforeach; ?>

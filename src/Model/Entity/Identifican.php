@@ -6,8 +6,9 @@ use Cake\ORM\Entity;
 /**
  * Identifican Entity.
  *
- * @property int $iditem
+ * @property int $idetiquetaitem
  * @property int $idetiqueta
+ * @property int $iditem
  */
 class Identifican extends Entity
 {
@@ -23,7 +24,6 @@ class Identifican extends Entity
      */
     protected $_accessible = [
         '*' => true,
-        'iditem' => false, //false
-        'idetiqueta' => false,
+        'idetiquetaitem' => false,
     ];
 }

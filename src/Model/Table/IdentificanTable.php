@@ -25,8 +25,8 @@ class IdentificanTable extends Table
         parent::initialize($config);
 
         $this->table('identifican');
-        $this->displayField('iditem');
-        $this->primaryKey(['iditem', 'idetiqueta']);
+        $this->displayField('idetiquetaitem');
+        $this->primaryKey('idetiquetaitem');
     }
 
     /**
@@ -38,12 +38,18 @@ class IdentificanTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->integer('iditem')
-            ->allowEmpty('iditem', 'create');
+            ->integer('idetiquetaitem')
+            ->allowEmpty('idetiquetaitem', 'create');
 
         $validator
             ->integer('idetiqueta')
-            ->allowEmpty('idetiqueta', 'create');
+            ->requirePresence('idetiqueta', 'create')
+            ->notEmpty('idetiqueta');
+
+        $validator
+            ->integer('iditem')
+            ->requirePresence('iditem', 'create')
+            ->notEmpty('iditem');
 
         return $validator;
     }
