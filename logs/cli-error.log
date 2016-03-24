@@ -18,3 +18,44 @@ Stack Trace:
 #15 {main}
 
 
+2016-03-24 11:07:35 Warning: Warning (2): Error while sending QUERY packet. PID=10888 in [C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php, line 36]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+PDOStatement::execute() - [internal], line ??
+Cake\Database\Statement\MysqlStatement::execute() - CORE\src\Database\Statement\MysqlStatement.php, line 36
+Cake\Database\Connection::query() - CORE\src\Database\Connection.php, line 284
+Cake\Database\Connection::execute() - CORE\src\Database\Connection.php, line 241
+Cake\Database\Schema\Collection::_reflect() - CORE\src\Database\Schema\Collection.php, line 128
+Cake\Database\Schema\Collection::describe() - CORE\src\Database\Schema\Collection.php, line 96
+Cake\Database\Schema\CachedCollection::describe() - CORE\src\Database\Schema\CachedCollection.php, line 64
+Bake\Shell\Task\FixtureTask::bake() - ROOT\vendor\cakephp\bake\src\Shell\Task\FixtureTask.php, line 175
+Bake\Shell\Task\ModelTask::bakeFixture() - ROOT\vendor\cakephp\bake\src\Shell\Task\ModelTask.php, line 1022
+Bake\Shell\Task\ModelTask::bake() - ROOT\vendor\cakephp\bake\src\Shell\Task\ModelTask.php, line 112
+Bake\Shell\Task\ModelTask::main() - ROOT\vendor\cakephp\bake\src\Shell\Task\ModelTask.php, line 96
+Cake\Console\Shell::runCommand() - CORE\src\Console\Shell.php, line 456
+Cake\Console\Shell::runCommand() - CORE\src\Console\Shell.php, line 450
+Cake\Console\ShellDispatcher::_dispatch() - CORE\src\Console\ShellDispatcher.php, line 217
+Cake\Console\ShellDispatcher::dispatch() - CORE\src\Console\ShellDispatcher.php, line 181
+Cake\Console\ShellDispatcher::run() - CORE\src\Console\ShellDispatcher.php, line 127
+[main] - ROOT\bin\cake.php, line 33
+
+
+
+2016-03-24 11:07:35 Error: [Cake\Database\Exception] SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+Stack Trace:
+#0 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'valoraciones', Array, Object(Cake\Database\Schema\Table))
+#1 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(64): Cake\Database\Schema\Collection->describe('valoraciones', Array)
+#2 C:\xampp\htdocs\coowi\vendor\cakephp\bake\src\Shell\Task\FixtureTask.php(179): Cake\Database\Schema\CachedCollection->describe('valoraciones')
+#3 C:\xampp\htdocs\coowi\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(1022): Bake\Shell\Task\FixtureTask->bake('Valoraciones', 'valoraciones')
+#4 C:\xampp\htdocs\coowi\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(112): Bake\Shell\Task\ModelTask->bakeFixture('Valoraciones', 'valoraciones')
+#5 C:\xampp\htdocs\coowi\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(96): Bake\Shell\Task\ModelTask->bake('Valoraciones')
+#6 [internal function]: Bake\Shell\Task\ModelTask->main('Valoraciones')
+#7 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Console\Shell.php(456): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Console\Shell.php(450): Cake\Console\Shell->runCommand(Array, false)
+#9 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(217): Cake\Console\Shell->runCommand(Array, true, Array)
+#10 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(181): Cake\Console\ShellDispatcher->_dispatch(Array)
+#11 C:\xampp\htdocs\coowi\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(127): Cake\Console\ShellDispatcher->dispatch(Array)
+#12 C:\xampp\htdocs\coowi\bin\cake.php(33): Cake\Console\ShellDispatcher::run(Array)
+#13 {main}
+
+
