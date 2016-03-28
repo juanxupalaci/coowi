@@ -32,8 +32,14 @@ class Usuario extends Entity
      *
      * @var array
      */
+     // Make all fields mass assignable except for primary key field "idusuario".
     protected $_accessible = [
         '*' => true,
         'idusuario' => false,
     ];
+    
+    protected function _setPassword($contrasena) //Antes ponia $password (segun la convencion CakePhp)
+    {
+        return (new DefaultPasswordHasher)->hash($contrasena);
+    }
 }

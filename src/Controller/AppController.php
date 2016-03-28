@@ -43,6 +43,40 @@ class AppController extends Controller
 
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
+        $this->loadComponent('Auth', [   //Componente para login y logout
+            'authorize' => ['Controller'], // Added this line to Authorization
+            'loginRedirect' => [
+                'controller' => 'Peticiones',
+                'action' => 'index'
+            ],
+            'logoutRedirect' => [
+                'controller' => 'Pages',
+                'action' => 'display',
+                'home'
+            ]
+        ]);
+    }
+    
+    public function isAuthorized($user) //Funcion para comprobar si un usuario esta autorizado o no
+    {
+        // Admin can access every action
+        if (isset($user['role']) && $user['role'] === 'admin') {
+            return true;
+        }
+        // Default deny
+        return false;
+    }
+    
+    
+    /**
+     * Sitios a los que esta permitido acceder
+     *
+     * @param \Cake\Event\Event $event The beforeRender event.
+     * @return void
+     */
+    public function beforeFilter(Event $event)
+    {
+        $this->Auth->allow(['index', 'view', 'display']);
     }
 
     /**

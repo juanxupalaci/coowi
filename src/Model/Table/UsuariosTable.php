@@ -90,6 +90,15 @@ class UsuariosTable extends Table
         $validator
             ->requirePresence('estado', 'create')
             ->notEmpty('estado');
+        
+        $validator //Validator de sistema de seguridad de usuarios
+            ->notEmpty('email', 'A username is required')
+            ->notEmpty('contrasena', 'A password is required')
+            ->notEmpty('role', 'A role is required')
+            ->add('role', 'inList', [
+                'rule' => ['inList', ['admin', 'author']],
+                'message' => 'Please enter a valid role'
+            ]);
 
         return $validator;
     }
